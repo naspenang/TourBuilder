@@ -135,7 +135,7 @@ window.pannellum = (function (window, document, undefined) {
         // Display about information on right click
         var aboutMsg = document.createElement('span');
         aboutMsg.className = 'pnlm-about-msg';
-        aboutMsg.innerHTML = '<a href="https://online.library.uitm.edu.my/TourBuilder" target="_parent">PTAR Virtual Tour Builder</a>';
+        aboutMsg.innerHTML = '<a href="https://online.library.uitm.edu.my/TourBuilder/" target="_blank">PTAR Virtual Tour Builder</a>';
         uiContainer.appendChild(aboutMsg);
         dragFix.addEventListener('contextmenu', aboutMessage);
 
@@ -1702,7 +1702,7 @@ window.pannellum = (function (window, document, undefined) {
                     imgp = config.basePath + imgp;
                 a = document.createElement('a');
                 a.href = sanitizeURL(hs.URL ? hs.URL : imgp, true);
-                a.target = '_parent';
+                a.target = '_blank';
                 span.appendChild(a);
                 var image = document.createElement('img');
                 image.src = sanitizeURL(imgp);
@@ -1719,7 +1719,7 @@ window.pannellum = (function (window, document, undefined) {
                         a.setAttribute(key, hs.attributes[key]);
                     }
                 } else {
-                    a.target = '_parent';
+                    a.target = '_blank';
                 }
                 renderContainer.appendChild(a);
                 div.className += ' pnlm-pointer';
@@ -1988,7 +1988,7 @@ window.pannellum = (function (window, document, undefined) {
                             if (config.authorURL) {
                                 var authorLink = document.createElement('a');
                                 authorLink.href = sanitizeURL(config['authorURL'], true);
-                                authorLink.target = '_parent';
+                                authorLink.target = '_blank';
                                 authorLink.innerHTML = escapeHTML(config[key]);
                                 authorText = authorLink.outerHTML;
                             }
@@ -1999,7 +1999,7 @@ window.pannellum = (function (window, document, undefined) {
                         case 'fallback':
                             var link = document.createElement('a');
                             link.href = sanitizeURL(config[key], true);
-                            link.target = '_parent';
+                            link.target = '_blank';
                             link.textContent = 'Click here to view this panorama in an alternative viewer.';
                             var message = document.createElement('p');
                             message.textContent = 'Your browser does not support WebGL.';
